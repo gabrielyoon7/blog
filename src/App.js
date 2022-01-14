@@ -19,7 +19,19 @@ function App() {
   }
 
   function 제목바꾸기(){
+    let newArray = [...글제목];
+    newArray = '여자코트 추천';
+    글제목변경(newArray);
+  }
+
+  function 제목여러개바꾸기(){
     글제목변경2(['곱창 맛집','아구찜 맛집','강남 우동 맛집']);
+  }
+
+  function 제목여러개중하나바꾸기(){
+    let newArray = [...글제목2];
+    newArray[0] = '바뀜~~';
+    글제목변경(newArray);
   }
 
   return (
@@ -27,7 +39,9 @@ function App() {
       <div className='black-nav'>
         <div>개발 Blog</div>
       </div>
-      <button onClick={ 제목바꾸기 }>버튼</button>
+      <button onClick={ 제목바꾸기 }>버튼1</button>
+      <button onClick={ 제목여러개바꾸기 }>버튼2</button>
+      <button onClick={ 제목여러개중하나바꾸기 }>버튼3</button>
       <img src={logo}/>
       <h4 style={{color:'blue', fontStyle:'italic'}}> {posts}</h4>
       <h4> {함수()}</h4>
