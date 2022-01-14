@@ -65,18 +65,19 @@ function App() {
         <p>2월 17일 발행</p>
         <hr/>
       </div>
-      <Modal></Modal>
+      <Modal title="hihi"></Modal>
+      <Modal title="wowow"></Modal>
     </div>
   );
 }
 
-function Modal(){
+function Modal(props){
   //Component의 이름은 항상 대문자로 시작해야한다.
   //return 속 태그는 반드시 하나로 묶어야함 (연속되게 등장 못함)
   //의미없는 div 같은걸로 묶기 싫으면 <> </>와 같이 fragment로 묶어도 ㄱㅊ
   return(
     <div className='modal'>
-      <h2>제목</h2>
+      <h2>{props.title}</h2>
       <p>날짜</p>
       <p>상세내용</p>
     </div>
