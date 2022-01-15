@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+// import Clock2 from './Clock';
 import reportWebVitals from './reportWebVitals';
 
 function Clock(props) {
@@ -12,16 +13,14 @@ function Clock(props) {
     </div>
   );
 }
-
 function tick() {
   ReactDOM.render(
     <Clock date={new Date()} />,
-    document.getElementById('timer')
+    document.getElementById('timer-function')
   );
 }
-
-
 setInterval(tick, 1000);
+
 
 ReactDOM.render(
   <React.StrictMode>
