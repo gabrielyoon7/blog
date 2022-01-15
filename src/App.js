@@ -34,6 +34,8 @@ function App() {
     글제목변경(newArray[0]);
   }
 
+
+  
   return (
     <div className='App'>
       <div className='black-nav'>
