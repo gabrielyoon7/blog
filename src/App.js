@@ -31,7 +31,7 @@ function App() {
   function 제목여러개중하나바꾸기(){
     let newArray = [...글제목2];
     newArray[0] = '바뀜~~';
-    글제목변경(newArray);
+    글제목변경(newArray[0]);
   }
 
   return (
@@ -39,10 +39,14 @@ function App() {
       <div className='black-nav'>
         <div>개발 Blog</div>
       </div>
-      <button onClick={ 제목바꾸기 }>버튼1</button>
-      <button onClick={ 제목여러개바꾸기 }>버튼2</button>
-      <button onClick={ 제목여러개중하나바꾸기 }>버튼3</button>
-      <img src={logo}/>
+      <div>
+        <img src={logo} className="App-logo" alt="logo" />
+      </div>
+      <div>
+        <button onClick={ 제목바꾸기 }>버튼1</button>
+        <button onClick={ 제목여러개바꾸기 }>버튼2</button>
+        <button onClick={ 제목여러개중하나바꾸기 }>버튼3</button>
+      </div>
       <h4 style={{color:'blue', fontStyle:'italic'}}> {posts}</h4>
       <h4> {함수()}</h4>
       <div className='list'>
@@ -65,16 +69,26 @@ function App() {
         <p>2월 17일 발행</p>
         <hr/>
       </div>
-      <Modal title="hihi"></Modal>
-      <Modal title="wowow"></Modal>
+      {/* Modal 컴포넌트 삽입 */}
+      <Modals></Modals>
     </div>
   );
 }
 
-function Modal(props){
+function Modals(){
   //Component의 이름은 항상 대문자로 시작해야한다.
   //return 속 태그는 반드시 하나로 묶어야함 (연속되게 등장 못함)
   //의미없는 div 같은걸로 묶기 싫으면 <> </>와 같이 fragment로 묶어도 ㄱㅊ
+  return(
+    //Component 안에 Component 넣기
+    <>
+      <Modal title="hihi"></Modal>
+      <Modal title="wowow"></Modal>
+    </>
+  )
+}
+
+function Modal(props){
   return(
     <div className='modal'>
       <h2>{props.title}</h2>
