@@ -1,19 +1,20 @@
-// class Clock extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {date: new Date()};
-//     }
+class Clock extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {date: new Date()};
+    }
   
-//     render() {
-//       return (
-//         <>
-//         {this.state.date.toLocaleTimeString()}
-//         </>
-//       );
-//     }
-// }
+    render() {
+      return (
+        <div>
+        <h1>Hello, world! By Class</h1>
+        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+        </div>
+      );
+    }
+}
 
-// ReactDOM.render(
-//     <Clock />,
-//     document.getElementById('root')
-//   );
+ReactDOM.render(
+    <Clock />,
+    document.getElementById('timer-class')
+  );
