@@ -8,7 +8,8 @@ import reportWebVitals from './reportWebVitals';
 function Clock(props) {
   return (
     <div>
-      <h1>Hello, world! By Functino</h1>
+      아래 function 호출이 왜 조금 늦는지는 파악해봐야 할 듯 (아마 setInterval이 조금 늦어저 그럴수도)
+      <h1>Hello, world! By Function</h1>
       <h2>It is {props.date.toLocaleTimeString()}.</h2>
     </div>
   );
