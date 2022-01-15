@@ -30,8 +30,14 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div id="greeting"></div>
+    <div id="login"></div>
     <div id="timer-function"></div>
     <div id="timer-class"></div>
+    <div id="toggle"></div>
+    <div id="toggle-form"></div>
+    <div id="loggingButton1"></div>
+    <div id="loggingButton2"></div>
         <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
@@ -43,6 +49,19 @@
 
     <!-- type="text/babel"을 써줘야 실행 할 때 JSX 해석 오류가 없음 -->
     <script type="text/babel" src="Clock.js"></script>
+    <script type="text/babel" src="Toggle.js"></script>
+    <script type="text/babel" src="LoggingButton.js"></script>
+    <script type="text/babel" src="Login.js"></script>
+
+    <button onClick={activateLasers}>
+      Activate Lasers
+    </button>
+
+    <form onsubmit="console.log('You clicked submit.'); return false">
+      <button type="submit">Submit</button>
+    </form>
+
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -54,4 +73,23 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script type="text/babel">
+    function Form() {
+      function handleSubmit(e) {
+        e.preventDefault();
+        console.log('You clicked submit.');
+      }
+
+      return (
+        <form onSubmit={handleSubmit}>
+          <button type="submit">Form Button</button>
+        </form>
+      );
+    }
+    ReactDOM.render(
+      <Form />,
+      document.getElementById('toggle-form')
+    );
+  </script>
 </html>
