@@ -1,10 +1,12 @@
 const numbers = [1, 2, 3, 4, 5];
 const listItems = numbers.map((numbers) => <li>{numbers}</li> );
 
-ReactDOM.render(
-  <ul>{listItems}</ul>,
-  document.getElementById('list')
-);
+
+// 키 누락으로 인한 버그 발생
+//ReactDOM.render(
+//  <ul>{listItems}</ul>,
+//  document.getElementById('list')
+//);
 
 
 
