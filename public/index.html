@@ -52,6 +52,15 @@
     <hr>
     Temperature.js
     <div id="calculator"></div>
+    <hr>
+
+    <button onClick={activateLasers}>
+      Activate Lasers
+    </button>
+
+    <form onsubmit="console.log('You clicked submit.'); return false">
+      <button type="submit">Submit</button>
+    </form>
 
         <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
@@ -72,16 +81,6 @@
     <script type="text/babel" src="Form.js"></script>
     <script type="text/babel" src="Reservation.js"></script>
     <script type="text/babel" src="Temperature.js"></script>
-    
-
-    <button onClick={activateLasers}>
-      Activate Lasers
-    </button>
-
-    <form onsubmit="console.log('You clicked submit.'); return false">
-      <button type="submit">Submit</button>
-    </form>
-
 
     <!--
       This HTML file is a template.
