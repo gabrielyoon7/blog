@@ -57,7 +57,7 @@ function App() {
         <hr/>
       </div>
       <div className='list'>
-        <h3> { 글제목2[0] } <span onClick={ 함수() }>♥</span> 0 </h3>
+        {/* <h3> { 글제목2[0] } <span onClick={ 함수() }>♥</span> 0 </h3> */}
         <p>2월 17일 발행</p>
         <hr/>
       </div>
