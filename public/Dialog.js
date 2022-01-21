@@ -6,18 +6,24 @@ function FancyBorder(props) {
     );
   }
   
-  function WelcomeDialog() {
+  function Dialog(props) {
     return (
       <FancyBorder color="blue">
-        {/* FancyBorder의 props.children에 들어갈 내용 시작*/}
         <h1 className="Dialog-title">
-          Welcome
+          {props.title}
         </h1>
         <p className="Dialog-message">
-          Thank you for visiting our spacecraft!
+          {props.message}
         </p>
-        {/* FancyBorder의 props.children에 들어갈 내용 끝*/}
       </FancyBorder>
+    );
+  }
+  
+  function WelcomeDialog() {
+    return (
+      <Dialog
+        title="Welcome"
+        message="Thank you for visiting our spacecraft!" />
     );
   }
   
