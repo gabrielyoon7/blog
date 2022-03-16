@@ -8,7 +8,7 @@ class Clock extends React.Component {
       this.state = {date: new Date()};
     }
   
-    // 다음은 Interval 관련 설명임.!!
+    // 다음은 Interval 관련 설명임.!!!!!!
     // The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
     // This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling clearInterval().
 
