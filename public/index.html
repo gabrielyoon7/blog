@@ -25,6 +25,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>React App</title>
   </head>
   <body>
@@ -40,22 +41,35 @@
     <div id="panel"></div>
     <div id="timer-function"></div>
     <div id="timer-class"></div>
+    <div id="signup-dialog"></div>
     <div id="toggle"></div>
     <div id="toggle-form"></div>
     <div id="loggingButton1"></div>
     <div id="loggingButton2"></div>
     <hr>
-    Form.js
+    <h2>Form.js</h2>
     <div id="name-form"></div>
     <div id="essay-form"></div>
     <div id="flavor-form"></div>
     <hr>
-    Reservation.js
+    <h2>Reservation.js</h2>
     <div id="reservation"></div>
     <hr>
-    Temperature.js
+    <h2>Temperature.js</h2>
     <div id="calculator"></div>
     <hr>
+    <h2>Thinking In React: Step 2</h2>
+    <div id="price-2"></div>
+    <hr>
+    <h2>Thinking In React: Step 4</h2>
+    <div id="price-4"></div>
+    <hr>
+    <h2>Thinking In React: Step 5</h2>
+    <div id="price-5"></div>
+    <hr>
+    <div id="selection"></div>
+    <hr>
+
 
     <button onClick={activateLasers}>
       Activate Lasers
@@ -86,6 +100,10 @@
     <script type="text/babel" src="Temperature.js"></script>
     <script type="text/babel" src="Dialog.js"></script>
     <script type="text/babel" src="Pane.js"></script>
+    <script type="text/babel" src="Price2.js"></script>
+    <script type="text/babel" src="Price4.js"></script>
+    <script type="text/babel" src="Price5.js"></script>
+    <!-- <script type="text/babel" src="Selection.js"></script> -->
 
     <!--
       This HTML file is a template.
@@ -117,6 +135,7 @@
       document.getElementById('toggle-form')
     );
   </script>
+
   <style>
     .FancyBorder {
       padding: 10px 10px;
