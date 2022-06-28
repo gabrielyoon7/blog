@@ -12,7 +12,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div>Hello World</div>
-        <WelcomeCard name={name}/>
+        <WelcomeCard name={name} setName={setName}/>
       </header>
     </div>
   );
